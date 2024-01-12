@@ -31,17 +31,25 @@
 <!-- 	-------- TO-DO: ADD FORM CODE HERE DURING CLASS, FOLLOW ALONG TO COMPLETE -------- -->
 			<form action="https://wp.zybooks.com/form-viewer.phpLinks to an external site." method="post">
 
-				<label for="fname" >First Name</label>
-				<input type="text" id="fname" name="fname" placeholder="First Name">
+				<label for="fname" >First Name<span class="required">*</span></label>
+				<input type="text" id="fname" name="fname" placeholder="First Name" required>
 
-				<label for="lname">Last Name</label>
-				<input type="text" name="lname" id="lname" placeholder="Last Name">
+				<label for="lname">Last Name<span class="required">*</span></label>
+				<input type="text" name="lname" id="lname" placeholder="Last Name" required>
 
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" placeholder="abc@example.com">
+				<label for="email">Email<span class="required">*</span></label>
+				<input type="email" name="email" id="email" placeholder="abc@example.com" required>
 
-				<label for="phoneNumber">Phone Number</label>
-				<input type="tel" name="phoneNumber" id="tel" placeholder="000-000-000">
+				<label for="phoneNumber">Phone Number<span class="required">*</span></label>
+				<input type="tel" name="phoneNumber" id="tel" placeholder="000-000-000" required>
+
+				<fieldset>
+					<legend>Preferred Contact Method<span class="required">*</span></legend>
+					<input id="method-phone" type="radio" name="method" value="Phone" required>
+					<label for="method-phone">Phone</label>
+							<input id="method-email" type="radio" name="method" value="Email">
+					<label for="method-email">Email</label>
+				</fieldset>
 
 			</form>
 		</article>
